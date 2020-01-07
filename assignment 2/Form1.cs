@@ -51,8 +51,31 @@ namespace assignment_2
             double R1, R2;
             try
             {
-                R1 = double.Parse()
-        }
+                R1 = double.Parse(textBox1.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R1");
+                R1 = 0.0;
+            }
+
+            try
+            {
+                R2 = double.Parse(textBox2.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R2");
+                R2 = 0.0;
+            }
+
+            double resistance = R1 + R2;
+            textBox3.Text = "Rt=" + resistance;
+
+            
+
+
+            
     }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -79,4 +102,48 @@ namespace assignment_2
         {
 
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            double R1, R2, R3;
+            try
+            {
+                R1 = double.Parse(textBox4.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R1");
+                R1 = 0.0;
+            }
+
+            try
+            {
+                R2 = double.Parse(textBox5.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R2");
+                R2 = 0.0;
+            }
+            try
+            {
+                R3 = double.Parse(textBox6.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R3");
+                R3 = 0.0;
+            }
+
+
+
+            double resistance = R1 + R2 + R3;
+            textBox7.Text = "Rt=" + resistance;
+        }
+
+        private void Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
+}
