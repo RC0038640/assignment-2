@@ -70,12 +70,13 @@ namespace assignment_2
             }
 
             double resistance = R1 + R2;
-            textBox3.Text = "Rt=" + resistance;
-
-            
+            textBox3.Text = "Rt=" + resistance+"Ω";
 
 
-            
+
+
+
+
     }
 
         private void Label3_Click(object sender, EventArgs e)
@@ -138,11 +139,76 @@ namespace assignment_2
 
 
             double resistance = R1 + R2 + R3;
-            textBox7.Text = "Rt=" + resistance;
+            textBox7.Text = "Rt=" + resistance + "Ω";
         }
 
         private void Button3_Click(object sender, EventArgs e)
         {
+            double R1, R2;
+            try
+            {
+                R1 = double.Parse(textBox8.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R1");
+                R1 = 0.0;
+            }
+
+            try
+            {
+                R2 = double.Parse(textBox9.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R2");
+                R2 = 0.0;
+            }
+
+            double resistance = 1 / ((1 / R1) + (1 / R2));
+            textBox10.Text = "Rt=" + resistance + "Ω";
+
+        }
+
+        private void TextBox14_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button4_Click(object sender, EventArgs e)
+        {
+                        double R1, R2, R3;
+            try
+            {
+                R1 = double.Parse(textBox11.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R1");
+                R1 = 0.0;
+            }
+
+            try
+            {
+                R2 = double.Parse(textBox12.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R2");
+                R2 = 0.0;
+            }
+            try
+            {
+                R3 = double.Parse(textBox13.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Wrong input R3");
+                R3 = 0.0;
+            }
+            double resistance = 1 / ((1 / R1) + (1 / R2) + (1/R3));
+            textBox14.Text = "Rt=" + resistance+ "Ω";
+
 
         }
     }
