@@ -48,7 +48,9 @@ namespace assignment_2
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            // this is for a series circuit with 2 resistors 
             double R1, R2;
+            //i have added a try/catch in order to notify the user that a pice of information is missing 
             try
             {
                 R1 = double.Parse(textBox1.Text);
@@ -71,6 +73,7 @@ namespace assignment_2
 
             double resistance = R1 + R2;
             textBox3.Text = "Rt=" + resistance+"Ω";
+            // this part works out the total resistance for the circuit and displayes the answer with units 
 
 
 
@@ -106,7 +109,9 @@ namespace assignment_2
 
         private void Button2_Click(object sender, EventArgs e)
         {
+            // this is to calculate the total resistance for a series circuit with 3 resistors 
             double R1, R2, R3;
+            //i have added a try/catch in order to notify the user that a pice of information is missing 
             try
             {
                 R1 = double.Parse(textBox4.Text);
@@ -134,7 +139,7 @@ namespace assignment_2
             {
                 MessageBox.Show("Wrong input R3");
                 R3 = 0.0;
-            }
+            }  // this part works out the total resistance for the circuit and displayes the answer with units
 
 
 
@@ -143,8 +148,9 @@ namespace assignment_2
         }
 
         private void Button3_Click(object sender, EventArgs e)
-        {
+        {   //this works out the total resistance fort a parralel circuit with 2 resisters 
             double R1, R2;
+            //i have added a try/catch in order to notify the user that a pice of information is missing 
             try
             {
                 R1 = double.Parse(textBox8.Text);
@@ -167,7 +173,7 @@ namespace assignment_2
 
             double resistance = 1 / ((1 / R1) + (1 / R2));
             textBox10.Text = "Rt=" + resistance + "Ω";
-
+            // this part works out the total resistance for the circuit and displayes the answer with units
         }
 
         private void TextBox14_TextChanged(object sender, EventArgs e)
@@ -176,8 +182,9 @@ namespace assignment_2
         }
 
         private void Button4_Click(object sender, EventArgs e)
-        {
+        { // this is for a parralel circuit with 3 resistorse 
                         double R1, R2, R3;
+            //i have added a try/catch in order to notify the user that a pice of information is missing 
             try
             {
                 R1 = double.Parse(textBox11.Text);
@@ -208,7 +215,7 @@ namespace assignment_2
             }
             double resistance = 1 / ((1 / R1) + (1 / R2) + (1/R3));
             textBox14.Text = "Rt=" + resistance+ "Ω";
-
+            // this part works out the total resistance for the circuit and displayes the answer with units
 
         }
     }
